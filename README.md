@@ -16,3 +16,13 @@
 - 👤 [Explore the creator's projects](https://go.ondev.store/bolveck-hue).
 - 🌍 [Create with OMGithub](https://go.ondev.store/).
 <!-- omgithub:readme:end -->
+
+## RE:MONSTER — Blood & Bloom
+
+A small browser-based survival action game. Open `index.html` in a browser (or serve this folder with `python3 -m http.server 3002`).
+
+- **Move:** WASD / arrow keys, or the on-screen joystick
+- **Aim & strike:** mouse and click, or the STRIKE button
+- **Dash:** Space
+- **Devour remains:** E, or the DEVOUR button
+- Choose a mutation whenever you evolve. Survive as many nights as you can.
