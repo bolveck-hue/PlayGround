@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#101611"><title>Mawbound — Verdant Rebirth</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Uncial+Antiqua&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js"}}</script>
+</head>
+<body>
+<div class="game-shell">
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">✦</span><span>MAWBOUND<small>VERDANT REBIRTH</small></span></a>
+    <nav class="chapter-nav"><span class="chapter-label">CHAPTER I</span><strong>THE HOLLOW WILD</strong></nav>
+    <div class="top-stats"><span class="day-pill">◷ <b id="day-count">DAY 01</b></span><button class="icon-btn" id="sound-toggle" aria-label="Toggle sound">♫</button><button class="icon-btn" id="help-btn" aria-label="Help">?</button></div>
+  </header>
+  <main class="main-grid">
+    <section class="stage-wrap">
+      <div id="scene" aria-label="3D forest battle scene"></div>
+      <div class="scene-vignette"></div>
+      <div class="scene-topline"><div class="location"><span class="live-dot"></span><span id="scene-location">MOSSHEART GLADE</span></div><div class="weather">☾ &nbsp;DUSK · MISTFALL</div></div>
+      <div class="enemy-caption" id="enemy-caption"><span class="enemy-rank">WILD · LV 2</span><strong id="enemy-name">Mireling</strong><div class="enemy-hp"><i id="enemy-hp-bar"></i></div><small id="enemy-hp-text">32 / 32 VIT</small></div>
+      <div class="float-toast" id="toast"></div>
+      <div class="combat-banner" id="combat-banner">A SHADOW STIRS IN THE FERN...</div>
+      <div class="scene-bottom"><span class="scene-hint">✦ &nbsp; CLICK A FOE TO FOCUS</span><button class="camera-btn" id="camera-btn">◉ &nbsp; ORBIT VIEW</button></div>
+    </section>
+    <aside class="sidebar">
+      <section class="hero-card panel">
+        <div class="panel-kicker">YOUR AWAKENED SELF <span class="level-tag" id="level-tag">LV 1</span></div>
+        <div class="hero-row"><div class="portrait"><span>♟</span><i></i></div><div class="hero-ident"><h1 id="hero-name">Rook</h1><p>THE HOLLOW-BORN <span>✦</span></p></div><button class="tiny-more" id="name-btn">···</button></div>
+        <div class="xp-row"><span>EXPERIENCE</span><span id="xp-label">0 / 40</span></div><div class="xp-track"><i id="xp-bar"></i></div>
+        <div class="vitals"><div><span class="vital-icon hp">♥</span><span class="vital-label">VIT</span><b id="hero-hp-label">100 / 100</b><div class="vital-track"><i id="hero-hp-bar"></i></div></div><div><span class="vital-icon mp">✧</span><span class="vital-label">ESS</span><b id="hero-mp-label">35 / 35</b><div class="vital-track mana"><i id="hero-mp-bar"></i></div></div></div>
+      </section>
+      <section class="party-panel panel"><div class="section-heading"><span>YOUR COVEN</span><button class="text-action" id="party-info">ROSTER ↗</button></div><div id="party-list" class="party-list"></div></section>
+      <section class="combat-panel panel"><div class="section-heading"><span>YOUR TURN</span><span class="turn-mark" id="turn-status">● READY</span></div><div class="action-grid"><button class="action-card primary" id="attack-btn"><span class="act-icon">⚔</span><span><b>Strike</b><small>Quick attack · no cost</small></span><kbd>1</kbd></button><button class="action-card" id="skill-btn"><span class="act-icon skill">✧</span><span><b>Blood Bloom</b><small>Heavy hit · 12 ESS</small></span><kbd>2</kbd></button><button class="action-card" id="guard-btn"><span class="act-icon guard">⬡</span><span><b>Brace</b><small>Reduce next hit · restore 4 ESS</small></span><kbd>3</kbd></button><button class="action-card" id="feed-btn"><span class="act-icon feed">♨</span><span><b>Devour</b><small>Absorb fallen foe · grow</small><kbd>4</kbd></button></div><div class="target-line"><span>TARGET</span><b id="target-label">Mireling</b><button id="cycle-target">SWITCH ↻</button></div></section>
+    </aside>
+    <section class="bottom-panel panel"><div class="log-wrap"><div class="section-heading"><span>FIELD NOTES</span><button id="clear-log" class="text-action">CLEAR</button></div><div id="battle-log" class="battle-log" aria-live="polite"></div></div><div class="progress-wrap"><div class="section-heading"><span>THE WILDS</span><span class="region-count" id="region-count">01 / 04</span></div><div class="region-list" id="region-list"></div><div class="bottom-buttons"><button id="rest-btn" class="subtle-btn">☽ &nbsp; CAMP & REST</button><button id="reset-btn" class="subtle-btn">↺ &nbsp; NEW RUN</button></div></div></section>
+  </main>
+  <footer><span>MAWBOUND: VERDANT REBIRTH</span><span>AN ORIGINAL DARK-FANTASY RPG · AUTOSAVES LOCALLY</span><span id="save-state">● SAVED</span></footer>
+</div>
+<div class="modal-backdrop hidden" id="modal"><div class="modal panel"><button class="modal-close" id="modal-close">×</button><div class="panel-kicker">FIELD GUIDE</div><h2 id="modal-title">A strange second life</h2><div id="modal-copy"></div><button class="confirm-btn" id="modal-ok">UNDERSTOOD</button></div></div>
+<script type="module" src="game.js"></script>
+</body></html>
